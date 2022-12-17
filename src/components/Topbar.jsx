@@ -8,9 +8,6 @@ export default function Topbar({ selectedCategory, setSelectedCategory }) {
     <Stack
       className="topbar-stack"
       direction="coloum"
-      sx={{
-        overflowY: "auto",
-      }}
       gap="10px"
     >
       {categories.map((category) => (
