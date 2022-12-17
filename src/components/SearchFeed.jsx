@@ -12,10 +12,10 @@ export default function SearchFeed() {
       sx={{
         borderRadius: 20,
         border: '1px solid #e3e3e3',
-        boxShadow: 'inset 0 1px 2px #eee',
         pl: 2,
         height: 40,
-        display: 'flex'
+        display: 'flex',
+        boxShadow: 'none'
       }}
     >
       <input

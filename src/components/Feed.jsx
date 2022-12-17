@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Box, Stack } from "@mui/material";
-import { Sidebar, Videos } from "./"
+import { Topbar, Videos } from "./"
 import { fetchFromAPI } from "../utils/fetchFromAPI";
 
 export default function Feed() {
@@ -17,9 +17,11 @@ export default function Feed() {
   return (
     <>
       <Stack className="feed" >
-        <Box className="sidebar">
-          <Sidebar selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
+        <Box className="topbar">
+          <Topbar selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
         </Box>
+      </Stack>
+      <Stack className="feed" >
         <Stack className="videos" sx={{ flexDirection: { sx: "column", md: "column" } }}>
           <Videos videos={videos} />
         </Stack>

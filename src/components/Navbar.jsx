@@ -10,7 +10,7 @@ export default function Navbar() {
         <img src={Logo} alt="logo" width={90} />
       </Link>
       <SearchFeed />
-      <Link className="user" to="/" style={{ display: "flex", alignItems: "center" }}>
+      <Link className="user" to="/">
         <img src={'https://yt3.ggpht.com/np3PW_DV0Foms36_86pEIJfTfyuBzKQarY7rZJCyAafbuH-KliboGL54ljl8cPVFvJlMc5_k_fU=s88-c-k-c0x00ffffff-no-rj-mo'} alt="logo" width={40} height={40} style={{ borderRadius: '50%', marginLeft: 'auto' }} />
       </Link>
     </Stack>

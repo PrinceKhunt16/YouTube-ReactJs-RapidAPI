@@ -3,10 +3,10 @@ import { Stack } from "@mui/material";
 
 import { categories } from "../utils/constants";
 
-export default function Sidebar({ selectedCategory, setSelectedCategory }) {
+export default function Topbar({ selectedCategory, setSelectedCategory }) {
   return (
     <Stack
-      className="sidebar-stack"
+      className="topbar-stack"
       direction="coloum"
       sx={{
         overflowY: "auto",

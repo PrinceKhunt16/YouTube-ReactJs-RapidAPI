@@ -30,7 +30,7 @@ a {
 }
 
 .navbar {
-  margin: 10px 25px 10px 25px;
+  padding: 10px 25px 10px 25px;
   position: fixed;
   top: 0px;
   background: #fff;
@@ -39,6 +39,8 @@ a {
 
 .user {
   width: 90px;
+  display: flex;
+  justify-content: center;
 }
 
 .search-bar {
@@ -50,7 +52,6 @@ a {
   height: auto;
   padding-bottom: 2px;
   width: 100%;
-  box-shadow: inset 0 1px 2px #eee;
 }
 
 .search-form {
@@ -73,17 +74,17 @@ a {
   margin: auto 24px auto 24px;
 } 
 
-.sidebar {
-  margin-top: 8px;
-  margin-bottom: 10px;
-  position: sticky;
-  background-color: #fff;
+.topbar {
+  position: fixed;
+  padding-top: 8px;
+  padding-bottom: 10px;
+  background: #fff;
+  z-index: 1;
 }
 
 .videos {
-  overflow-y: scroll;
-  height: calc(100vh - 113px);
   display: grid;
+  margin-top: 51px;
 }
 
 .videos::-webkit-scrollbar {
@@ -115,7 +116,7 @@ a {
   align-items: center;
 }
 
-.sidebar-stack::-webkit-scrollbar {
+.topbar-stack::-webkit-scrollbar {
   display: none;
 }
 
@@ -136,8 +137,6 @@ a {
   color: black;
 }
 
-@media only screen and (max-width: 2560px) {}
-
 @media only screen and (max-width: 1200px) {
   .search-form {
     max-width: 500px;
@@ -150,8 +149,10 @@ a {
 
 @media only screen and (max-width: 600px) {
   .navbar {
+    padding: 0;
     padding-left: 8px;
     padding-right: 8px;
+    padding-top: 8px;
   }
 
   .search-form {
@@ -160,6 +161,10 @@ a {
 
   .feed {
     margin: auto 9px auto 9px;
+  }
+
+  .user {
+    display: none;
   }
 }
 
