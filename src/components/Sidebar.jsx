@@ -18,7 +18,8 @@ export default function Sidebar({ selectedCategory, setSelectedCategory }) {
           className="category-btn"
           onClick={() => setSelectedCategory(category.name)}
           style={{
-            background: category.name === selectedCategory && "#dfdfdf",
+            background: category.name === selectedCategory && "#000",
+            color: category.name === selectedCategory && "#fff",
           }}
           key={category.name}
         >

@@ -1,5 +1,6 @@
 export const categories = [
   { name: 'New' },
+  { name: 'Trending' },
   { name: 'Coding' },
   { name: 'Music' },
   { name: 'Random' },
