@@ -7,10 +7,9 @@ export default function Sidebar({ selectedCategory, setSelectedCategory }) {
   return (
     <Stack
       className="sidebar-stack"
-      direction="column"
+      direction="coloum"
       sx={{
         overflowY: "auto",
-        flexDirection: { md: "column" },
       }}
       gap="10px"
     >
@@ -23,7 +22,7 @@ export default function Sidebar({ selectedCategory, setSelectedCategory }) {
           }}
           key={category.name}
         >
-          <span style={{ opacity: category.name === selectedCategory ? "1" : "0.8" }}>
+          <span style={{ opacity: category.name === selectedCategory ? "1" : "0.9" }}>
             {category.name}
           </span>
         </button>

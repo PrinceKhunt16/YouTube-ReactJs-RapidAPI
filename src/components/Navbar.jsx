@@ -5,7 +5,7 @@ import SearchFeed from "./SearchFeed";
 
 export default function Navbar() {
   return (
-    <Stack className="navbar" direction="row" alignItems="center" sx={{ position: "sticky", background: '#fff', top: 0, justifyContent: "space-between", gap: '10px' }}>
+    <Stack className="navbar" direction="row" alignItems="center" sx={{ position: "sticky", background: '#fff', top: 0, justifyContent: "space-between", gap: '20px' }}>
       <Link to="/" style={{ display: "flex", alignItems: "center" }}>
         <img src={Logo} alt="logo" width={90} />
       </Link>

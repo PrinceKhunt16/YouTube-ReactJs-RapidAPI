@@ -1,7 +1,7 @@
-export default function VideoDetail() {
+
+
+export default function VideoDetails() {
   return (
-    <div>
-      VideoDetail
-    </div>
+    <div>VideoDetails</div>
   )
 }
