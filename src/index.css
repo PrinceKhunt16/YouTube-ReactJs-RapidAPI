@@ -65,6 +65,7 @@ a {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  border: none;
   background: #f8f8f8;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
@@ -87,8 +88,8 @@ a {
   margin-top: 51px;
 }
 
-.videos::-webkit-scrollbar {
-  display: none;
+.search-videos {
+  display: grid;
 }
 
 .videos-list {

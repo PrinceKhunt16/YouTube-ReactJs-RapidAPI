@@ -1,32 +1,25 @@
-import React, { useState } from 'react';
-import { useNavigate } from "react-router-dom";
-import { Paper } from '@mui/material';
-import Search from '../utils/search.png'
+import React, { useEffect, useState } from "react";
+import { Box, Stack } from "@mui/material";
+import { Topbar, Videos } from "./"
+import { fetchFromAPI } from "../utils/fetchFromAPI";
+import { useParams } from "react-router-dom";
 
-export default function SearchFeed() {
+export default function Feed() {
+  const [videos, setVideos] = useState([]);
+  const { searchTerm } = useParams();
+
+  useEffect(() => {
+    fetchFromAPI(`search?part=snippet&q=${searchTerm}`)
+      .then((data) => setVideos(data.items))
+  }, [searchTerm])
+
   return (
-    <Paper
-      component="form"
-      onSubmit={() => {}}
-      className="search-form"
-      sx={{
-        borderRadius: 20,
-        border: '1px solid #e3e3e3',
-        pl: 2,
-        height: 40,
-        display: 'flex',
-        boxShadow: 'none'
-      }}
-    >
-      <input
-        className='search-bar'
-        placeholder='Search'
-        // value=''
-        onChange={() => {}}
-      />
-      <div className='search-image' type='submit' aria-label='Search'>
-        <img src={Search} height="18px" alt="" />
-      </div>
-    </Paper>
+    <>
+      <Stack className="feed">
+        <Stack className="search-videos" sx={{ flexDirection: { sx: "column", md: "column" } }}>
+          <Videos videos={videos} />
+        </Stack>
+      </Stack>
+    </>
   )
 }
