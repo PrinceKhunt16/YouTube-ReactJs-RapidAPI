@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Box, Stack } from "@mui/material";
-import { Topbar, Videos } from "./"
+import { Stack } from "@mui/material";
+import { Videos, Loader } from "./"
 import { fetchFromAPI } from "../utils/fetchFromAPI";
 import { useParams } from "react-router-dom";
 
@@ -12,6 +12,8 @@ export default function Feed() {
     fetchFromAPI(`search?part=snippet&q=${searchTerm}`)
       .then((data) => setVideos(data.items))
   }, [searchTerm])
+
+  if(videos === null) return <Loader />
 
   return (
     <>

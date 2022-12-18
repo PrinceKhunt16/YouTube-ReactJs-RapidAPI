@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { fetchFromAPI } from "../utils/fetchFromAPI";
 import ChannelDetailCard from "./ChannelDetailCard";
-import Videos from "./Videos";
+import { Loader, Videos} from "./"
 
 export default function ChannelDetail() {
   const { id } = useParams()
@@ -17,6 +17,8 @@ export default function ChannelDetail() {
     fetchFromAPI(`search?channelId=${id}&part=snippet&order=date`)
       .then((data) => setVideos(data?.items))
   }, [id])
+
+  if(videos === null) return <Loader />
 
   return (
     <Box className="channel-video-list">

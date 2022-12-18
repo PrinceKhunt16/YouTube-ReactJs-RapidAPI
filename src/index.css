@@ -29,6 +29,21 @@ a {
   background-color: transparent;
 }
 
+.loader {
+  width: 100vw;
+  height: calc(100vh - 100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader h1 {
+  font-family: 'Caveat';
+  font-size: 40px;
+  font-weight: 300;
+  color: #ff0000;
+}
+
 .navbar {
   padding: 10px 25px 10px 25px;
   position: fixed;
@@ -94,11 +109,15 @@ a {
 
 .videos-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
 
 .channel-video-list {
+  margin: auto 25px;
+}
+
+.video-page {
   margin: auto 25px;
 }
 
@@ -119,6 +138,37 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.react-player {
+  height: 77vh !important;
+  width: 100% !important;
+}
+
+.react-player video {
+  width: 100%;
+}
+
+.video-title {
+  font-size: 18px;
+  font-family: 'Roboto';
+  font-weight: 400;
+  margin: 0;
+  padding-top: 10px;
+}
+
+.video-reletedvideos {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+}
+
+.div-one {
+  min-width: 70%;
+}
+
+.div-two {
+  max-width: '330px';
 }
 
 .topbar-stack::-webkit-scrollbar {
@@ -150,14 +200,25 @@ a {
   .user {
     width: auto;
   }
+
+  .video-reletedvideos {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .react-player {
+    height: 600px !important;
+  }
 }
 
 @media only screen and (max-width: 600px) {
   .navbar {
     padding: 0;
-    padding-left: 8px;
-    padding-right: 8px;
-    padding-top: 8px;
+    padding: 8px;
+  }
+
+  .react-player {
+    height: 300px !important;
   }
 
   .channel-video-list {
@@ -169,7 +230,11 @@ a {
   }
 
   .feed {
-    margin: auto 9px auto 9px;
+    margin: auto 9px;
+  }
+
+  .video-page {
+    margin: auto 9px;
   }
 
   .user {

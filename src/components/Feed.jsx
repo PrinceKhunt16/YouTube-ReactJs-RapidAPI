@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Box, Stack } from "@mui/material";
-import { Topbar, Videos } from "./"
+import { Topbar, Videos, Loader } from "./"
 import { fetchFromAPI } from "../utils/fetchFromAPI";
 
 export default function Feed() {
   const [selectedCategory, setSelectedCategory] = useState("New");
-  const [videos, setVideos] = useState([]);
+  const [videos, setVideos] = useState(null);
 
   useEffect(() => {
     fetchFromAPI(`search?part=snippet&q=${selectedCategory}`)
@@ -13,6 +13,8 @@ export default function Feed() {
         setVideos(data.items)
       })
   }, [selectedCategory])
+   
+  if(!videos) return <Loader />
 
   return (
     <>

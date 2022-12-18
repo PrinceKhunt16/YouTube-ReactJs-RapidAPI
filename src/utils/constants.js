@@ -1,11 +1,7 @@
 export const categories = [
   { name: 'New' },
   { name: 'Trending' },
-  { name: 'Coding' },
   { name: 'Music' },
-  { name: 'Random' },
-  { name: 'Pathan' },
-  { name: 'Dhanki' },
   { name: 'Education' },
   { name: 'Podcast' },
   { name: 'Movie' },
@@ -13,18 +9,7 @@ export const categories = [
   { name: 'Live' },
   { name: 'Sport' },
   { name: 'Fashion' },
-  { name: 'Beauty' },
-  { name: 'Comedy' },
-  { name: 'Gym' },
-  { name: 'Crypto' },
-  { name: 'Cricket' },
-  { name: 'Google' },
-  { name: 'Microsoft' },
-  { name: 'Uber' },
-  { name: 'Amezone' },
-  { name: 'Food' },
-  { name: 'React' },
-  { name: 'Python' },
+  { name: 'Gym' }
 ]
 
 export const demoThumbnailUrl = 'https://i.ibb.co/G2L2Gwp/API-Course.png'

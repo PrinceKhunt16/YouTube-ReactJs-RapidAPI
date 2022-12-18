@@ -3,8 +3,7 @@ import { Box, CardMedia, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { demoProfilePicture } from '../utils/constants';
 
-export default function ChannelCard({ channelDetail, marginTop }) {
-  console.log(channelDetail)
+export default function ChannelCard({ channelDetail }) {
   return (
     <Box>
       <Box
@@ -16,7 +15,6 @@ export default function ChannelCard({ channelDetail, marginTop }) {
           height: '200px',
           borderRadius: '10px',
           margin: 'auto',
-          marginTop,
           background: '#11111110'
         }}
       >

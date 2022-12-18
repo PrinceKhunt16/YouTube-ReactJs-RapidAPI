@@ -1,8 +1,9 @@
-import React from 'react';
-import { Box, CardContent, CardMedia, Typography } from '@mui/material';
-import { demoProfilePicture } from '../utils/constants';
+import React from 'react'
+import { Box, CardContent, CardMedia, Typography } from '@mui/material'
+import { demoProfilePicture } from '../utils/constants'
+import { getSubs } from '../utils/utils'
 
-export default function ChannelDetailCard({ channelDetail }) {
+export default function ChannelDetailCard({ channelDetail }) {  
   return (
     <Box>
       <CardContent sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', textAlign: 'center', color: '#000', p: 0, paddingTop: '20px' }}>
@@ -16,7 +17,7 @@ export default function ChannelDetailCard({ channelDetail }) {
         </Typography>
         {channelDetail?.statistics?.subscriberCount && (
           <Typography sx={{ fontSize: '14px', fontWeight: 400, color: '#606060' }}>
-            {parseInt(channelDetail?.statistics?.subscriberCount).toLocaleString('en-US')} Subscribers
+            {getSubs(channelDetail?.statistics?.subscriberCount)} Subscribers
           </Typography>
         )}
       </CardContent>
