@@ -96,6 +96,13 @@ a {
   padding-bottom: 10px;
   background: #fff;
   z-index: 1;
+  width: 100%;
+  overflow-y: scroll;
+  width: calc(100% - 24px);
+}
+
+.topbar::-webkit-scrollbar {
+  display: none;
 }
 
 .videos {
@@ -138,11 +145,22 @@ a {
   border-radius: 10px;
 }
 
+.channel-card-body {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
 .channel-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 
 .react-player {
@@ -242,6 +260,10 @@ a {
 
   .user {
     display: none;
+  }
+
+  .topbar {
+    width: calc(100% - 09px);
   }
 }
 

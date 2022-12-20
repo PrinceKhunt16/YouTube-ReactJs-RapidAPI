@@ -24,6 +24,7 @@ export default function Topbar({ selectedCategory, setSelectedCategory }) {
           </span>
         </button>
       ))}
+      <div className="white-box"></div>
     </Stack>
   )
 }
