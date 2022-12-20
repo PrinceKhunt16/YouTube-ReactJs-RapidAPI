@@ -11,7 +11,7 @@ export default function Navbar() {
       </Link>
       <SearchBar />
       <Link className="user" to="/">
-        <img src={'https://yt3.ggpht.com/np3PW_DV0Foms36_86pEIJfTfyuBzKQarY7rZJCyAafbuH-KliboGL54ljl8cPVFvJlMc5_k_fU=s88-c-k-c0x00ffffff-no-rj-mo'} alt="logo" width={40} height={40} style={{ borderRadius: '50%', marginLeft: 'auto' }} />
+        <img src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_0e9IUDTB5m1cAxkvDphiaANlfQuVOvi_Vw&usqp=CAU'} alt="logo" width={40} height={40} style={{ borderRadius: '50%', marginLeft: 'auto', objectFit: 'cover' }} />
       </Link>
     </Stack>
   )
